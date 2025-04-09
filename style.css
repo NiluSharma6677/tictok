@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #1a1a2e, #0f3460);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+/* Game Title */
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 10px #e63946, 0px 0px 20px #ff5733;
+    margin-bottom: 20px;
+}
+
+/* Game Board */
+.container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tic-Tac-Toe Grid */
+.game {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5vmin;
+    width: 60vmin;
+    height: 60vmin;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Individual Cell */
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    font-size: 8vmin;
+    color: #ffcc29;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    transition: transform 0.2s ease-in-out, background 0.3s, box-shadow 0.3s;
+}
+
+/* Hover Effect */
+.box:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Winner Message */
+.msg-container {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
+    display: none;
+}
+
+#msg {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc29;
+    text-shadow: 0px 0px 10px #ff5733;
+}
+
+/* Buttons */
+button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* New Game Button */
+#new-btn {
+    background: linear-gradient(45deg, #ff5733, #e63946);
+    color: white;
+    box-shadow: 0px 0px 15px rgba(255, 87, 51, 0.6);
+}
+
+#new-btn:hover {
+    background: linear-gradient(45deg, #e63946, #ff1e00);
+}
+
+/* Reset Button */
+.reset {
+    background: linear-gradient(45deg, #1abc9c, #16a085);
+    color: white;
+    box-shadow: 0px 0px 15px rgba(26, 188, 156, 0.6);
+    margin-top: 20px;
+}
+
+.reset:hover {
+    background: linear-gradient(45deg, #16a085, #0e6655);
+}
+
+/* Hide Class */
+.hide {
+    display: none;
+}
